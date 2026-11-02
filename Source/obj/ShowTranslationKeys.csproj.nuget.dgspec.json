@@ -1,0 +1,74 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\GOG Games\\RimWorld\\Mods\\ShowTranslationKeys\\Source\\ShowTranslationKeys.csproj": {}
+  },
+  "projects": {
+    "C:\\GOG Games\\RimWorld\\Mods\\ShowTranslationKeys\\Source\\ShowTranslationKeys.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GOG Games\\RimWorld\\Mods\\ShowTranslationKeys\\Source\\ShowTranslationKeys.csproj",
+        "projectName": "ShowTranslationKeys",
+        "projectPath": "C:\\GOG Games\\RimWorld\\Mods\\ShowTranslationKeys\\Source\\ShowTranslationKeys.csproj",
+        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
+        "outputPath": "C:\\GOG Games\\RimWorld\\Mods\\ShowTranslationKeys\\Source\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "targetAlias": "net472",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
+      },
+      "frameworks": {
+        "net472": {
+          "targetAlias": "net472",
+          "dependencies": {
+            "Krafs.Rimworld.Ref": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.6.*, )"
+            },
+            "Lib.Harmony": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.3.*, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.114\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

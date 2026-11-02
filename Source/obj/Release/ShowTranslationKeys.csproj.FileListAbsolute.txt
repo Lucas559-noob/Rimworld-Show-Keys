@@ -1,0 +1,7 @@
+C:\GOG Games\RimWorld\Mods\ShowTranslationKeys\Source\bin\Release\ShowTranslationKeys.dll
+C:\GOG Games\RimWorld\Mods\ShowTranslationKeys\Source\bin\Release\0Harmony.dll
+C:\GOG Games\RimWorld\Mods\ShowTranslationKeys\Source\obj\Release\ShowTranslationKeys.csproj.AssemblyReference.cache
+C:\GOG Games\RimWorld\Mods\ShowTranslationKeys\Source\obj\Release\ShowTranslationKeys.GeneratedMSBuildEditorConfig.editorconfig
+C:\GOG Games\RimWorld\Mods\ShowTranslationKeys\Source\obj\Release\ShowTranslationKeys.csproj.CoreCompileInputs.cache
+C:\GOG Games\RimWorld\Mods\ShowTranslationKeys\Source\obj\Release\ShowTran.A5A2E285.Up2Date
+C:\GOG Games\RimWorld\Mods\ShowTranslationKeys\Source\obj\Release\ShowTranslationKeys.dll

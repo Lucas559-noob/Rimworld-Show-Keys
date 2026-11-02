@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <STK_SettingsCategory>Show Translation Keys</STK_SettingsCategory>
+
+  <STK_DevModeWarning>WARNING: Dev mode is OFF. Key wrapping is disabled. Enable dev mode under Options, then Dev mode, to see keys in the UI.</STK_DevModeWarning>
+  <STK_WrapKeysLabel>Show translation keys in UI (uncheck for normal text; detection keeps running)</STK_WrapKeysLabel>
+  <STK_SpawnRequiresDevMode>Require dev mode for spawn/UI helpers (uncheck to use them without dev mode)</STK_SpawnRequiresDevMode>
+
+  <STK_TargetKeySection>Target key</STK_TargetKeySection>
+  <STK_TargetKeyLabel>Target key (empty = wrap all keys):</STK_TargetKeyLabel>
+  <STK_LogCaller>Log stack trace when target key appears</STK_LogCaller>
+  <STK_HighlightTarget>Visually highlight the target key using &gt;&gt;key&lt;&lt; markers</STK_HighlightTarget>
+
+  <STK_WrapperLabel>Key wrapper style: {0}</STK_WrapperLabel>
+  <STK_WrapperGuillemets>Double angle brackets</STK_WrapperGuillemets>
+  <STK_WrapperBrackets>Double square brackets</STK_WrapperBrackets>
+  <STK_KeyPrefixLabel>Key prefix filter (empty = all keys):</STK_KeyPrefixLabel>
+  <STK_KeyPrefixHint>e.g. "Command_" to wrap only Command_ keys</STK_KeyPrefixHint>
+
+  <STK_DetectedUISection>Detected UI</STK_DetectedUISection>
+  <STK_NoUIDetected>(none yet - open the UI once)</STK_NoUIDetected>
+  <STK_ManualUILabel>Manual UI class (overrides if valid C# class):</STK_ManualUILabel>
+  <STK_HotkeyLabel>Hotkey: {0}</STK_HotkeyLabel>
+  <STK_HotkeyHint>Type a KeyCode (e.g. F10, Home, PageUp)</STK_HotkeyHint>
+  <STK_OpenUIButton>Open UI now</STK_OpenUIButton>
+
+  <STK_UiCatalogSection>UI catalog</STK_UiCatalogSection>
+  <STK_ScanUIsButton>Scan loaded UIs</STK_ScanUIsButton>
+  <STK_UIsInList>UIs in list: {0}</STK_UIsInList>
+  <STK_FilterLabel>Filter:</STK_FilterLabel>
+  <STK_NoResults>(no results)</STK_NoResults>
+
+  <STK_DetectedHistorySection>Previously detected UIs</STK_DetectedHistorySection>
+
+  <STK_ContextSection>Context generator</STK_ContextSection>
+  <STK_ContextDefLabel>DefName (auto from target key, or type one):</STK_ContextDefLabel>
+  <STK_ContextDefHint>e.g. Archogenetics, MedicineIndustrial, Backstory_Colonist28</STK_ContextDefHint>
+  <STK_DefDetected>Detected {0} '{1}'</STK_DefDetected>
+  <STK_GenerateContextButton>Generate context for {0}</STK_GenerateContextButton>
+  <STK_NoDefFound>No Def found for '{0}'</STK_NoDefFound>
+  <STK_TypeDefNameHint>Type a DefName above.</STK_TypeDefNameHint>
+  <STK_RerollTaleButton>Reroll tale on selected art</STK_RerollTaleButton>
+
+  <STK_LogHint>The mod logs each location once. See Player.log for stack traces.</STK_LogHint>
+
+</LanguageData>

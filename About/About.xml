@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Show Translation Keys</name>
+  <author>YourName</author>
+  <packageId>YourName.ShowTranslationKeys</packageId>
+  <modVersion>1.4.0</modVersion>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>A debug tool for translators. Replaces translated text with the raw translation key, so you can visually map each key to its UI location.
+
+Key wrapping requires Dev mode. Spawn/UI helpers can be decoupled from dev mode via a checkbox in the settings.
+
+Features:
+- Wraps every translated string with the raw key, using &lt;&lt;key&gt;&gt; markers
+- Highlights target keys with &gt;&gt;key&lt;&lt; markers
+- Detects and reopens the UI that used a key (stack trace + configurable hotkey)
+- Context generator: spawn a pawn/item/creature with a specific Def
+- Art/tale support: spawns sculptures with a random tale and lets you reroll it
+- UI catalog: scan and open any Window/MainTabWindow in the running game
+- Prefix filter, wrapper style, fully localized settings UI
+- Silent UTF-8 encoding check on startup (warns in the log if translations were saved with the wrong encoding)
+
+Requires Harmony. This is a debug-only tool — the game becomes unreadable on purpose while key wrapping is on.</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+</ModMetaData>

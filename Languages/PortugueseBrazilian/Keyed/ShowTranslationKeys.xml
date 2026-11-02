@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <STK_SettingsCategory>Show Translation Keys</STK_SettingsCategory>
+
+  <STK_DevModeWarning>AVISO: Modo desenvolvedor DESATIVADO. Exibicao de chaves desligada. Ative em Opcoes, depois Modo desenvolvedor, para ver as chaves na UI.</STK_DevModeWarning>
+  <STK_WrapKeysLabel>Mostrar chaves de traducao na UI (desmarque para texto normal; deteccao continua)</STK_WrapKeysLabel>
+  <STK_SpawnRequiresDevMode>Exigir dev mode para spawn/UI (desmarque para usar sem dev mode)</STK_SpawnRequiresDevMode>
+
+  <STK_TargetKeySection>Chave alvo</STK_TargetKeySection>
+  <STK_TargetKeyLabel>Chave alvo (vazio = envolver todas as chaves):</STK_TargetKeyLabel>
+  <STK_LogCaller>Logar stack trace quando a chave alvo aparecer</STK_LogCaller>
+  <STK_HighlightTarget>Destacar visualmente a chave alvo usando marcadores &gt;&gt;chave&lt;&lt;</STK_HighlightTarget>
+
+  <STK_WrapperLabel>Estilo do wrapper: {0}</STK_WrapperLabel>
+  <STK_WrapperGuillemets>Colchetes angulares duplos</STK_WrapperGuillemets>
+  <STK_WrapperBrackets>Colchetes quadrados duplos</STK_WrapperBrackets>
+  <STK_KeyPrefixLabel>Filtro de prefixo de chave (vazio = todas):</STK_KeyPrefixLabel>
+  <STK_KeyPrefixHint>ex: "Command_" para envolver so as chaves Command_</STK_KeyPrefixHint>
+
+  <STK_DetectedUISection>UI detectada</STK_DetectedUISection>
+  <STK_NoUIDetected>(nenhuma ainda - abra a UI uma vez)</STK_NoUIDetected>
+  <STK_ManualUILabel>Classe da UI manual (sobrescreve se for classe C# valida):</STK_ManualUILabel>
+  <STK_HotkeyLabel>Tecla de atalho: {0}</STK_HotkeyLabel>
+  <STK_HotkeyHint>Digite um KeyCode (ex: F10, Home, PageUp)</STK_HotkeyHint>
+  <STK_OpenUIButton>Abrir UI agora</STK_OpenUIButton>
+
+  <STK_UiCatalogSection>Catalogo de UIs</STK_UiCatalogSection>
+  <STK_ScanUIsButton>Escanear UIs carregadas</STK_ScanUIsButton>
+  <STK_UIsInList>UIs na lista: {0}</STK_UIsInList>
+  <STK_FilterLabel>Filtro:</STK_FilterLabel>
+  <STK_NoResults>(nenhum resultado)</STK_NoResults>
+
+  <STK_DetectedHistorySection>UIs detectadas anteriormente</STK_DetectedHistorySection>
+
+  <STK_ContextSection>Gerador de contexto</STK_ContextSection>
+  <STK_ContextDefLabel>DefName (auto da chave alvo, ou digite um):</STK_ContextDefLabel>
+  <STK_ContextDefHint>ex: Archogenetics, MedicineIndustrial, Backstory_Colonist28</STK_ContextDefHint>
+  <STK_DefDetected>Detectado {0} '{1}'</STK_DefDetected>
+  <STK_GenerateContextButton>Gerar contexto para {0}</STK_GenerateContextButton>
+  <STK_NoDefFound>Nenhum Def encontrado para '{0}'</STK_NoDefFound>
+  <STK_TypeDefNameHint>Digite um DefName acima.</STK_TypeDefNameHint>
+  <STK_RerollTaleButton>Re-sortear tale na arte selecionada</STK_RerollTaleButton>
+
+  <STK_LogHint>O mod loga cada local uma vez. Veja Player.log para stack traces.</STK_LogHint>
+
+</LanguageData>
