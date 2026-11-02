@@ -30,6 +30,21 @@ jobs:
       - name: Build
         run: dotnet build -c Release Source/ShowTranslationKeys.csproj --no-restore
 
+      - name: Locate DLL
+        id: dll
+        shell: bash
+        run: |
+          set -e
+          DLL=$(find Source/bin/Release -type f -name "ShowTranslationKeys.dll" | head -1)
+          if [ -z "$DLL" ]; then
+            echo "ERROR: ShowTranslationKeys.dll not found under Source/bin/Release"
+            echo "Contents of Source/bin:"
+            find Source/bin -type f || true
+            exit 1
+          fi
+          echo "path=${DLL}" >> "$GITHUB_OUTPUT"
+          echo "Found: ${DLL}"
+
       - name: Resolve version
         id: version
         shell: bash
@@ -52,9 +67,8 @@ jobs:
           cp -r Languages "$STAGE/"
           cp LICENSE "$STAGE/"
           cp README.md "$STAGE/"
-          cp Source/bin/Release/net472/ShowTranslationKeys.dll "$STAGE/Assemblies/"
+          cp "${{ steps.dll.outputs.path }}" "$STAGE/Assemblies/ShowTranslationKeys.dll"
 
-          # Inject the resolved version into About.xml
           sed -i "s|<modVersion>.*</modVersion>|<modVersion>${{ steps.version.outputs.version }}</modVersion>|" \
             "$STAGE/About/About.xml"
 
@@ -77,7 +91,7 @@ jobs:
           name: ShowTranslationKeys-${{ steps.version.outputs.version }}
           path: |
             ShowTranslationKeys-${{ steps.version.outputs.version }}.zip
-            Source/bin/Release/net472/ShowTranslationKeys.dll
+            ${{ steps.dll.outputs.path }}
           retention-days: 30
 
       - name: Create GitHub Release
@@ -87,7 +101,7 @@ jobs:
           name: ShowTranslationKeys ${{ steps.version.outputs.version }}
           files: |
             ShowTranslationKeys-${{ steps.version.outputs.version }}.zip
-            Source/bin/Release/net472/ShowTranslationKeys.dll
+            ${{ steps.dll.outputs.path }}
           generate_release_notes: true
           draft: false
           prerelease: false
