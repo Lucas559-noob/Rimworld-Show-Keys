@@ -125,29 +125,3 @@ translate the values, and submit a PR. Keep the `<STK_*>` tags untouched.
 **Save XML files as UTF-8 without BOM.** Saving as ANSI/Windows-1252 produces
 mojibake (`traduÃ§Ã£o`) and the mod will warn about it in the log.
 
-## License
-
-MIT. See LICENSE.
-
-</BDS:create_file>
-
-<BDS:create_file fileName="ShowTranslationKeys/CHANGELOG.md">
-
-```markdown
-# Changelog
-
-All notable changes to this project are documented here.
-Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-Versioning: [Semantic Versioning](https://semver.org/).
-
-## [1.4.0] - 2026-11-02
-
-### Fixed
-- **Sculpture spawn in 1.6** — the `Sculpture` ThingDef no longer exists;
-  the generator now tries `SculptureGrand`, `SculptureLarge` and
-  `SculptureSmall` in order.
-- **Precept signature mismatch** — `PreceptMaker.MakePrecept` changed its
-  parameter list across versions; the generator now tries multiple signatures.
-- **Genes applied as xenogenes** — previously applied as endogenes, which
-  could be masked by existing hair/s
-
