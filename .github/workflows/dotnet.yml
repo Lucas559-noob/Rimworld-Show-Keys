@@ -2,10 +2,10 @@ name: Build and Release
 
 on:
   push:
-    branches: [ main, master ]
-    tags: [ 'v*' ]
+    branches: [main, master]
+    tags: ['v*']
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -24,66 +24,53 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore
-        run: dotnet restore Source/ShowTranslationKeys.csproj
-
       - name: Build
-        run: dotnet build -c Release Source/ShowTranslationKeys.csproj --no-restore
+        run: dotnet build Source/ShowTranslationKeys.csproj --configuration Release
 
       - name: Locate DLL
         id: dll
         shell: bash
         run: |
-          set -e
-          DLL=$(find Source/bin/Release -type f -name "ShowTranslationKeys.dll" | head -1)
-          if [ -z "$DLL" ]; then
-            echo "ERROR: ShowTranslationKeys.dll not found under Source/bin/Release"
-            echo "Contents of Source/bin:"
+          set -euo pipefail
+          DLL="Source/bin/Release/ShowTranslationKeys.dll"
+          if [ ! -f "$DLL" ]; then
+            echo "ERROR: expected build output not found: $DLL"
             find Source/bin -type f || true
             exit 1
           fi
-          echo "path=${DLL}" >> "$GITHUB_OUTPUT"
-          echo "Found: ${DLL}"
+          echo "path=$DLL" >> "$GITHUB_OUTPUT"
 
       - name: Resolve version
         id: version
         shell: bash
         run: |
-          if [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
             VERSION="${GITHUB_REF#refs/tags/v}"
           else
             VERSION="0.0.0-${GITHUB_SHA::7}"
           fi
-          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
-          echo "Resolved version: ${VERSION}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Stage mod folder
         shell: bash
         run: |
-          set -e
+          set -euo pipefail
           STAGE="staging/ShowTranslationKeys"
           mkdir -p "$STAGE/Assemblies"
-          cp -r About "$STAGE/"
-          cp -r Languages "$STAGE/"
-          cp LICENSE "$STAGE/"
-          cp README.md "$STAGE/"
+          cp -r About Languages "$STAGE/"
+          cp LICENSE README.md "$STAGE/"
           cp "${{ steps.dll.outputs.path }}" "$STAGE/Assemblies/ShowTranslationKeys.dll"
-
           sed -i "s|<modVersion>.*</modVersion>|<modVersion>${{ steps.version.outputs.version }}</modVersion>|" \
             "$STAGE/About/About.xml"
-
-          echo "Staged contents:"
           find "$STAGE" -type f | sort
 
       - name: Package zip
         shell: bash
         run: |
-          set -e
+          set -euo pipefail
           NAME="ShowTranslationKeys-${{ steps.version.outputs.version }}"
           cd staging
           zip -r "../${NAME}.zip" ShowTranslationKeys
-          cd ..
-          ls -lh "${NAME}.zip"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
